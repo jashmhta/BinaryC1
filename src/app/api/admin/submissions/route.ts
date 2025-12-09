@@ -38,7 +38,7 @@ export async function GET(request: NextRequest) {
         total,
         totalPages: Math.ceil(total / limit),
       },
-      statusCounts: statusCounts.reduce((acc, item) => {
+      statusCounts: statusCounts.reduce((acc: Record<string, number>, item: any) => {
         acc[item.status] = item._count;
         return acc;
       }, {} as Record<string, number>),

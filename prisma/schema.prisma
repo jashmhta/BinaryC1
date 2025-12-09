@@ -7,6 +7,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
+  url      = env("DATABASE_URL")
 }
 
 // Contact Form Submissions
@@ -24,7 +25,7 @@ model ContactSubmission {
   referrer  String?
   
   // Status tracking
-  status    SubmissionStatus @default(NEW)
+  status    String @default("NEW")
   notes     String?
   assignedTo String?
   
@@ -38,13 +39,6 @@ model ContactSubmission {
   @@index([createdAt])
 }
 
-enum SubmissionStatus {
-  NEW
-  IN_PROGRESS
-  RESPONDED
-  CLOSED
-  SPAM
-}
 
 // Newsletter Subscriptions
 model Newsletter {
@@ -115,8 +109,8 @@ model ServiceInquiry {
   timeline  String?
   
   // Status
-  status    InquiryStatus @default(NEW)
-  priority  InquiryPriority @default(MEDIUM)
+  status    String @default("NEW")
+  priority  String @default("MEDIUM")
   
   // Metadata
   ipAddress String?
@@ -131,28 +125,14 @@ model ServiceInquiry {
   @@index([createdAt])
 }
 
-enum InquiryStatus {
-  NEW
-  QUALIFIED
-  PROPOSAL_SENT
-  NEGOTIATION
-  WON
-  LOST
-}
 
-enum InquiryPriority {
-  LOW
-  MEDIUM
-  HIGH
-  URGENT
-}
 
 // Admin Users (for future admin panel)
 model AdminUser {
   id        String   @id @default(cuid())
   email     String   @unique
   name      String
-  role      AdminRole @default(VIEWER)
+  role      String @default("VIEWER")
   
   // Authentication
   passwordHash String?
@@ -168,12 +148,6 @@ model AdminUser {
   @@index([email])
 }
 
-enum AdminRole {
-  VIEWER
-  EDITOR
-  ADMIN
-  SUPER_ADMIN
-}
 
 // Website Settings (for dynamic configuration)
 model Setting {
