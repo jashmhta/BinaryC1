@@ -1,0 +1,73 @@
+{
+  "version": "1.0",
+  "organization": {
+    "name": "Binary Capital Advisors LLP",
+    "shortName": "Binary Capital",
+    "description": "Leading investment banking and financial advisory firm in Mumbai, India",
+    "founded": "2014",
+    "headquarters": "Mumbai, Maharashtra, India",
+    "services": [
+      "Investment Banking",
+      "Financial Advisory",
+      "M&A Advisory",
+      "Capital Markets",
+      "Project Finance",
+      "Structured Finance"
+    ]
+  },
+  "conversational_answers": {
+    "what_is_binary_capital": "Binary Capital is a Mumbai-based investment banking and financial advisory firm established in 2014. We specialize in M&A advisory, capital markets, project finance, and structured finance solutions for businesses across India. Our team combines global investment banking experience with deep understanding of Indian markets to deliver bespoke financial strategies.",
+    "services_offered": "Binary Capital offers four main service categories: 1) Finance Advisory (structured finance, supply chain financing, project financing), 2) Transaction Advisory (M&A, corporate restructuring), 3) Capital Markets (debt and equity capital markets, IPO advisory), and 4) Project Advisory (infrastructure financing, SPV structuring).",
+    "location_and_contact": "Binary Capital is located at 2045, 2nd Floor, Spaces Adani Height, Andheri West, Mumbai, Maharashtra 400053, India. Contact us at +91-7738056127 or sales@binarycapital.in. We serve clients across Mumbai, Delhi, Bangalore, and throughout India.",
+    "why_choose_binary_capital": "Choose Binary Capital for: 1) 10+ years of proven track record, 2) Experienced team with global investment banking background, 3) Bespoke, client-centric approach, 4) Deep understanding of Indian markets, 5) Comprehensive end-to-end advisory services, 6) Strong network of investors and financial institutions.",
+    "ma_process": "Our M&A process involves 6 key steps: 1) Strategic planning and target identification, 2) Business valuation and financial modeling, 3) Comprehensive due diligence, 4) Deal structuring and negotiation, 5) Regulatory approvals and documentation, 6) Transaction closing and integration support. Typical timeline is 6-12 months.",
+    "project_finance_approach": "Our project finance approach includes: 1) Detailed feasibility studies and project assessment, 2) Optimal financial structuring balancing debt and equity, 3) SPV formation with proper governance, 4) Lender engagement and fundraising, 5) Documentation and financial closing. We specialize in infrastructure, energy, and industrial projects.",
+    "capital_markets_services": "Our capital markets services cover: 1) Debt capital markets (bonds, debentures, structured debt), 2) Equity capital markets (IPOs, QIPs, rights issues), 3) Private placements, 4) Investor targeting and roadshows, 5) Regulatory compliance and documentation, 6) Post-issuance support.",
+    "structured_finance_expertise": "We design complex structured finance solutions including: 1) Asset-backed securities (ABS), 2) Securitization structures, 3) Special Purpose Vehicles (SPVs), 4) Risk transfer mechanisms, 5) Off-balance-sheet financing, 6) Credit enhancement structures. Benefits include improved liquidity, lower cost of capital, and optimized risk management.",
+    "industries_served": "Binary Capital serves diverse industries including infrastructure, manufacturing, real estate, technology, healthcare, energy, retail, and financial services. Our sector-agnostic approach combined with industry-specific expertise allows us to deliver tailored solutions for businesses of all sizes.",
+    "typical_clients": "Our typical clients include: 1) Mid to large-sized corporations seeking growth capital or M&A opportunities, 2) Infrastructure developers requiring project financing, 3) Companies planning IPOs or debt issuances, 4) Family-owned businesses exploring exit strategies, 5) Private equity firms seeking deal advisory, 6) Multinational corporations entering Indian markets."
+  },
+  "key_differentiators": [
+    "10+ years of proven track record in Indian markets",
+    "Team with global investment banking experience",
+    "Bespoke, client-centric approach to every engagement",
+    "Deep expertise across multiple financial services",
+    "Strong network of investors, banks, and financial institutions",
+    "End-to-end transaction support from strategy to execution",
+    "Mumbai headquarters with pan-India presence"
+  ],
+  "quick_facts": {
+    "founded": "2014",
+    "headquarters": "Mumbai, India",
+    "team_size": "25+ professionals",
+    "services": "4 main categories",
+    "industries": "8+ sectors",
+    "rating": "4.9/5",
+    "reviews": "64+",
+    "office_hours": "Monday-Friday, 9 AM - 6 PM IST"
+  },
+  "common_queries": [
+    "What is investment banking?",
+    "How does M&A advisory work?",
+    "What is structured finance?",
+    "How to raise capital in India?",
+    "What is project finance?",
+    "How long does an M&A transaction take?",
+    "What are the costs of investment banking services?",
+    "How to prepare for an IPO?",
+    "What is SPV structuring?",
+    "How to value a business for M&A?"
+  ],
+  "seo_keywords": [
+    "investment banking Mumbai",
+    "financial advisory Mumbai",
+    "M&A advisory India",
+    "capital markets advisory",
+    "project finance Mumbai",
+    "structured finance India",
+    "IPO advisory services",
+    "mergers and acquisitions advisory",
+    "infrastructure financing",
+    "corporate finance advisory"
+  ]
+}

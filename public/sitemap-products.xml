@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Structured Finance -->
+  <url>
+    <loc>https://binarycapital.in/products/structuredfinance</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  
+  <!-- Structured Bonds -->
+  <url>
+    <loc>https://binarycapital.in/products/structuredbonds</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  
+  <!-- Supply Chain Financing -->
+  <url>
+    <loc>https://binarycapital.in/products/supplychainfinancing</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  
+  <!-- Project Financing -->
+  <url>
+    <loc>https://binarycapital.in/products/projectfinancing</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  
+  <!-- Mergers & Acquisitions -->
+  <url>
+    <loc>https://binarycapital.in/products/mergersacquisitions</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  
+  <!-- Capital Markets Product -->
+  <url>
+    <loc>https://binarycapital.in/products/capitalmarkets</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  
+</urlset>

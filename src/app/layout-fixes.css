@@ -1,0 +1,70 @@
+/* Comprehensive Layout Fixes for BinaryCapital Website */
+
+/* Ensure all containers have proper padding on mobile */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Fix text overflow issues */
+  h1, h2, h3, h4, h5, h6, p, li, span {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Ensure proper spacing for sections */
+  section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  
+  /* Fix hero sections on mobile */
+  section[class*="pt-32"] {
+    padding-top: 6rem !important;
+  }
+  
+  /* Ensure cards have proper spacing */
+  [class*="card"], [class*="bg-white"], [class*="rounded-lg"] {
+    margin-bottom: 1rem;
+  }
+  
+  /* Fix numbered lists alignment */
+  [class*="flex items-start"] {
+    align-items: flex-start !important;
+  }
+}
+
+/* Desktop layout improvements */
+@media (min-width: 769px) {
+  /* Ensure consistent max-width */
+  .max-w-7xl {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Proper section spacing */
+  section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* Universal fixes */
+* {
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal scroll */
+body, html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Ensure images are responsive */
+img, video {
+  max-width: 100%;
+  height: auto;
+}

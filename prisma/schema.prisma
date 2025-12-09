@@ -1,0 +1,194 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+// Contact Form Submissions
+model ContactSubmission {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  company   String?
+  message   String
+  phone     String?
+  
+  // Metadata
+  ipAddress String?
+  userAgent String?
+  referrer  String?
+  
+  // Status tracking
+  status    SubmissionStatus @default(NEW)
+  notes     String?
+  assignedTo String?
+  
+  // Timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  respondedAt DateTime?
+  
+  @@index([email])
+  @@index([status])
+  @@index([createdAt])
+}
+
+enum SubmissionStatus {
+  NEW
+  IN_PROGRESS
+  RESPONDED
+  CLOSED
+  SPAM
+}
+
+// Newsletter Subscriptions
+model Newsletter {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  
+  // Subscription details
+  subscribed Boolean  @default(true)
+  source    String?  // Where they subscribed from
+  
+  // Metadata
+  ipAddress String?
+  
+  // Timestamps
+  subscribedAt DateTime @default(now())
+  unsubscribedAt DateTime?
+  updatedAt DateTime @updatedAt
+  
+  @@index([email])
+  @@index([subscribed])
+}
+
+// Analytics Events (optional - for custom event tracking)
+model AnalyticsEvent {
+  id        String   @id @default(cuid())
+  
+  // Event details
+  eventType String   // e.g., "page_view", "button_click", "form_start"
+  eventName String?  // e.g., "contact_form_submitted", "service_viewed"
+  
+  // Page context
+  page      String   // URL path
+  referrer  String?
+  
+  // User context
+  sessionId String?
+  userId    String?
+  ipAddress String?
+  userAgent String?
+  
+  // Event data (JSON)
+  metadata  String?  // Store additional data as JSON string
+  
+  // Timestamps
+  createdAt DateTime @default(now())
+  
+  @@index([eventType])
+  @@index([page])
+  @@index([createdAt])
+  @@index([sessionId])
+}
+
+// Service Inquiries (for specific service pages)
+model ServiceInquiry {
+  id        String   @id @default(cuid())
+  
+  // Contact info
+  name      String
+  email     String
+  phone     String?
+  company   String?
+  
+  // Service details
+  serviceType String  // e.g., "M&A", "Capital Markets", "Project Finance"
+  projectDetails String?
+  budget    String?
+  timeline  String?
+  
+  // Status
+  status    InquiryStatus @default(NEW)
+  priority  InquiryPriority @default(MEDIUM)
+  
+  // Metadata
+  ipAddress String?
+  source    String?  // Which page/campaign
+  
+  // Timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@index([serviceType])
+  @@index([status])
+  @@index([createdAt])
+}
+
+enum InquiryStatus {
+  NEW
+  QUALIFIED
+  PROPOSAL_SENT
+  NEGOTIATION
+  WON
+  LOST
+}
+
+enum InquiryPriority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+// Admin Users (for future admin panel)
+model AdminUser {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  role      AdminRole @default(VIEWER)
+  
+  // Authentication
+  passwordHash String?
+  
+  // Status
+  active    Boolean  @default(true)
+  
+  // Timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  lastLoginAt DateTime?
+  
+  @@index([email])
+}
+
+enum AdminRole {
+  VIEWER
+  EDITOR
+  ADMIN
+  SUPER_ADMIN
+}
+
+// Website Settings (for dynamic configuration)
+model Setting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  
+  // Metadata
+  description String?
+  category  String?  // e.g., "contact", "analytics", "features"
+  
+  // Timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@index([key])
+  @@index([category])
+}
